@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lisseth Zapata | Full Stack Developer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+:root{--scroll-y:0px}
+html,body{margin:0;padding:0;background:#0a0a0a}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{overscroll-behavior:none;overflow-x:hidden;font-size:16px;line-height:1.65}
+::-webkit-scrollbar{display:none}
+a,button{-webkit-tap-highlight-color:transparent}
+.glass-card{background:linear-gradient(135deg,rgba(48,48,48,.88),rgba(34,34,34,.88) 52%,rgba(42,42,42,.86));backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.16);box-shadow:0 10px 32px rgba(0,0,0,.24),0 0 22px rgba(255,255,255,.04)}
+.glass-pill{background:rgba(70,70,70,.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.14)}
+.glass-card,.glass-pill{min-width:0;transition:border-color .35s ease,box-shadow .35s ease,background-color .35s ease,transform .35s cubic-bezier(.2,.7,.2,1)}
+.reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1),border-color .35s ease,box-shadow .35s ease}
+.reveal.in{opacity:1;transform:none}
+.glass-card:hover{background:linear-gradient(135deg,rgba(60,60,60,.94),rgba(40,40,40,.94));border-color:rgba(255,255,255,.3)}
+.glass-pill:hover{background:rgba(95,95,95,.75);border-color:rgba(255,255,255,.3)}
+@media(hover:hover){.glass-card:hover,.glass-pill:hover{transform:translateY(-4px)}}
+.site-bar{background:rgba(30,30,30,.92);border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.nav-main{display:none}
+.nav-main a{padding:.45rem 1rem;font-size:.75rem;font-weight:500;color:#c4c4c4;border-radius:.5rem;white-space:nowrap;transition:.2s}
+.nav-main a:hover{color:#fff;background:rgba(255,255,255,.06)}
+main{overflow-x:clip;padding:clamp(6rem,9vw,8rem) 0 4rem}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:clamp(1rem,4vw,3rem);display:flex;flex-direction:column;gap:clamp(3.5rem,8vw,7rem)}
+main section{scroll-margin-top:6.5rem;min-width:0;width:100%}
+.sec-head{display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;margin-bottom:clamp(1.5rem,4vw,2.5rem)}
+main h2{font-size:clamp(1.75rem,3.2vw,2.65rem);line-height:1.16;letter-spacing:-.025em;text-wrap:balance}
+main h3{font-size:clamp(1.2rem,1.7vw,1.5rem);line-height:1.3;text-wrap:pretty}
+main p,main li{overflow-wrap:break-word;text-wrap:pretty}
+.hero h1{font-size:clamp(2.25rem,4.4vw + 1rem,4.5rem);line-height:1.08}
+.hero-role{font-size:clamp(1.5rem,2.4vw + .9rem,3rem);line-height:1.15}
+.hero-photo{width:clamp(220px,68vw,300px);aspect-ratio:1/1}
+.ambient-wave-layer{position:fixed;inset:-12vh -8vw;z-index:1;pointer-events:none;overflow:hidden;opacity:.38;filter:blur(22px);transform:translate3d(0,calc(var(--scroll-y) * -.075),0);will-change:transform}
+.ambient-wave-layer svg{width:116%;height:116%;position:absolute;inset:-8%;overflow:visible}
+.ambient-wave-layer path{stroke:none}
+.ribbon-drift{transform-box:fill-box;transform-origin:center;will-change:transform}
+.ribbon-one{animation:w1 19s ease-in-out infinite alternate}
+.ribbon-two{animation:w2 24s ease-in-out infinite alternate}
+.ribbon-three{animation:w3 29s ease-in-out infinite alternate}
+.ribbon-glow{animation:w3 22s ease-in-out infinite alternate}
+@keyframes w1{from{transform:translate3d(-1.1%,-1.2%,0) scaleY(.98)}to{transform:translate3d(1.2%,1.5%,0) scaleY(1.035)}}
+@keyframes w2{from{transform:translate3d(1%,1.2%,0) scaleY(1.02)}to{transform:translate3d(-1.1%,-1%,0) scaleY(.97)}}
+@keyframes w3{from{transform:translate3d(-.7%,.8%,0)}to{transform:translate3d(.8%,-.9%,0)}}
+.ambient-orb{animation:orb 16s ease-in-out infinite alternate}
+@keyframes orb{from{translate:0 -12px;scale:1}to{translate:18px 18px;scale:1.045}}
+.site-footer{border-top:1px solid rgba(255,255,255,.12);background:rgba(12,12,12,.85);padding:2.5rem 0}
+.site-footer a{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#c4c4c4;transition:color .2s}
+.site-footer a:hover{color:#ffffff}
+@media(min-width:640px){.hero-photo{width:clamp(280px,48vw,340px)}}
+@media(min-width:1024px){
+.nav-main{display:flex;gap:.375rem;padding:.25rem;border-radius:.75rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)}
+.site-bar{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.hero-photo{width:clamp(290px,30vw,390px)}
+}
+@media(max-width:1023px){
+.nav-main{display:flex;position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom,0px));z-index:60;overflow-x:auto;scrollbar-width:none;gap:.25rem;padding:.35rem;border-radius:1rem;background:rgba(20,20,20,.95);border:1px solid rgba(255,255,255,.16);box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.nav-main a{flex:0 0 auto;padding:.65rem .95rem;font-size:.8rem}
+body{padding-bottom:5.5rem}
+}
+@media(max-width:767px){
+.ambient-wave-layer{display:none}
+.ambient-orb{animation:none}
+.glass-card,.glass-pill{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+}
+@media(max-width:639px){
+.wrap{gap:3.5rem}
+.two-col{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.75rem!important}
+#contacto>div{padding:1.5rem}
+}
+@media(max-width:479px){
+.cv-label{display:none}
+.cta>a{flex:1 1 100%;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+.reveal{opacity:1;transform:none}
+.ambient-wave-layer{display:none}
+}
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#ffffff","primary-container":"#525252","secondary":"#d4d4d4","secondary-container":"#525252","tertiary":"#a3a3a3","tertiary-container":"#737373","background":"#0a0a0a","surface":"#121212","on-surface":"#f5f5f5","on-surface-variant":"#c4c4c4","outline":"#8a8a8a","accent-fuchsia":"#e5e5e5","accent-violet":"#a3a3a3","accent-indigo":"#737373"},fontFamily:{headline:["Geist","sans-serif"],body:["Inter","sans-serif"],mono:["JetBrains Mono","monospace"]}}}};
+</script>
+</head>
+<body class="bg-[#0a0a0a] font-body text-on-surface antialiased relative min-h-screen selection:bg-primary-container selection:text-white">
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="ambient-orb absolute -top-[15%] right-[-5%] w-[850px] h-[650px] bg-gradient-to-br from-accent-fuchsia/20 via-accent-violet/15 to-transparent blur-[140px] rounded-full"></div>
+<div class="ambient-orb absolute top-[8%] left-[-10%] w-[700px] h-[600px] bg-gradient-to-tr from-accent-indigo/25 via-secondary-container/20 to-transparent blur-[160px] rounded-full"></div>
+<div class="ambient-orb absolute top-[42%] right-[5%] w-[600px] h-[550px] bg-gradient-to-bl from-accent-fuchsia/15 via-accent-violet/10 to-transparent blur-[150px] rounded-full"></div>
+<div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:28px_28px] opacity-40"></div>
+</div>
+<div class="ambient-wave-layer" aria-hidden="true">
+<svg viewBox="0 0 1600 1100" preserveAspectRatio="none">
+<defs>
+<linearGradient id="rp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".92"/><stop offset=".42" stop-color="#e5e5e5" stop-opacity=".78"/><stop offset=".72" stop-color="#a3a3a3" stop-opacity=".62"/><stop offset="1" stop-color="#525252" stop-opacity=".78"/></linearGradient>
+<linearGradient id="rl" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#525252" stop-opacity=".18"/><stop offset=".38" stop-color="#d4d4d4" stop-opacity=".86"/><stop offset=".68" stop-color="#f5f5f5" stop-opacity=".94"/><stop offset="1" stop-color="#737373" stop-opacity=".52"/></linearGradient>
+<linearGradient id="rv" x1="0" y1="0" x2="1" y2=".8"><stop offset="0" stop-color="#404040" stop-opacity=".28"/><stop offset=".48" stop-color="#9a9a9a" stop-opacity=".88"/><stop offset="1" stop-color="#d4d4d4" stop-opacity=".48"/></linearGradient>
+<filter id="rg" x="-20%" y="-80%" width="140%" height="260%"><feGaussianBlur stdDeviation="13"/></filter>
+</defs>
+<g class="ribbon-drift ribbon-glow" filter="url(#rg)" opacity=".55"><path fill="#bdbdbd" d="M-100 350 C150 90 300 210 520 350 C760 505 920 410 1110 205 C1300 0 1450 50 1710 -65 L1710 45 C1450 190 1310 140 1150 300 C930 520 760 600 500 445 C280 315 130 235 -100 470Z"/></g>
+<g class="ribbon-drift ribbon-one"><path fill="url(#rv)" d="M-100 285 C120 115 255 125 440 250 C650 390 820 400 1030 205 C1240 5 1420 65 1710 -115 L1710 -10 C1430 185 1300 135 1085 330 C850 540 640 500 405 345 C235 230 115 230 -100 390Z"/><path fill="url(#rp)" d="M-100 350 C115 185 245 180 430 285 C640 405 790 475 1000 330 C1220 180 1370 80 1710 -35 L1710 35 C1390 230 1260 315 1045 405 C815 515 640 465 405 365 C235 295 110 300 -100 445Z"/></g>
+<g class="ribbon-drift ribbon-two"><path fill="url(#rl)" d="M-100 405 C120 270 265 255 445 335 C650 425 795 505 1000 435 C1215 360 1390 205 1710 55 L1710 130 C1390 315 1230 450 1015 505 C800 565 625 475 420 405 C245 345 115 365 -100 500Z"/><path fill="url(#rv)" d="M-100 515 C125 355 280 365 455 455 C650 555 820 605 1030 520 C1240 435 1400 280 1710 145 L1710 205 C1395 390 1250 515 1045 585 C815 665 635 585 425 510 C250 445 120 475 -100 600Z"/></g>
+<g class="ribbon-drift ribbon-three" opacity=".72"><path fill="url(#rp)" d="M-100 625 C120 470 285 490 470 575 C665 665 820 735 1035 665 C1250 595 1435 445 1710 335 L1710 390 C1425 545 1265 700 1045 745 C820 795 645 705 445 630 C255 555 120 590 -100 710Z"/></g>
+</svg>
+</div>
+<header class="fixed top-0 left-0 w-full z-50 px-3 sm:px-8 pt-3 sm:pt-4">
+<div class="site-bar max-w-[1280px] mx-auto h-14 sm:h-16 px-4 sm:px-6 rounded-2xl flex items-center justify-between">
+<a class="flex items-center gap-3 group" href="#">
+<div class="flex items-baseline">
+<span class="font-headline text-2xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">LZ</span>
+<span class="inline-block w-2 h-2 rounded-full ml-1 bg-gradient-to-r from-accent-fuchsia via-primary to-accent-violet shadow-[0_0_12px_#ffffff]"></span>
+</div>
+<div class="hidden sm:flex flex-col pl-3 border-l border-white/10">
+<span class="font-headline text-sm font-medium leading-none text-white">Lisseth Zapata</span>
+<span class="font-mono text-[10px] tracking-wider text-on-surface-variant uppercase mt-1">Full Stack Dev</span>
+</div>
+</a>
+<nav class="nav-main">
+<a href="#">Sobre Mí</a>
+<a href="#stack">Stack Tecnológico</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#enfoque">Enfoque &amp; IA</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<div class="flex items-center gap-2.5">
+<a class="w-9 h-9 rounded-xl glass-pill flex items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="https://github.com/lissethkatherine" rel="noopener noreferrer" target="_blank" title="GitHub"><span class="material-symbols-outlined text-[19px]">code</span></a>
+<a class="inline-flex items-center justify-center gap-1.5 h-9 px-3 sm:px-4 rounded-xl bg-gradient-to-r from-white via-neutral-200 to-neutral-400 text-black font-headline text-xs font-semibold shadow-[0_0_20px_rgba(255,255,255,0.17)] transition-all hover:scale-[1.02]" href="https://github.com/lissethkatherine/lissethkatherine/raw/main/CV-Lisseth-Zapata.pdf" rel="noopener noreferrer" target="_blank" title="Descargar CV"><span class="material-symbols-outlined text-[16px]">download</span><span class="cv-label">Descargar CV</span></a>
+<div class="hidden sm:flex w-8 h-8 rounded-full bg-gradient-to-tr from-accent-fuchsia to-accent-violet items-center justify-center shrink-0 p-[1px]"><div class="w-full h-full bg-[#141414] rounded-full flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[17px]">person</span></div></div>
+</div>
+</div>
+</header>
+<main class="relative z-10 w-full">
+<div class="wrap">
+<section class="hero grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col items-start gap-6 order-last lg:order-first min-w-0">
+<div class="inline-flex items-start gap-2.5 px-4 py-2 rounded-2xl glass-pill max-w-full">
+<span class="relative flex h-2.5 w-2.5 mt-1.5 shrink-0"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-fuchsia opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent-fuchsia"></span></span>
+<span class="font-mono text-xs text-on-surface font-medium tracking-wide">Disponible para nuevos desafíos · Bucaramanga, Colombia</span>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="font-headline font-bold tracking-tight text-white">Lisseth Zapata</h1>
+<span class="hero-role font-headline font-bold bg-gradient-to-r from-accent-fuchsia via-primary to-secondary bg-clip-text text-transparent">Full Stack Developer</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant mt-1.5"><span class="material-symbols-outlined text-[19px] text-accent-fuchsia">location_on</span><span class="text-sm font-medium">Bucaramanga, Santander, Colombia</span></div>
+</div>
+<div class="relative p-5 sm:p-6 rounded-2xl glass-card border-l-4 border-l-accent-fuchsia overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-accent-fuchsia/10 rounded-full blur-2xl pointer-events-none"></div>
+<p class="relative text-base sm:text-lg text-white/95 leading-relaxed italic font-light">Estudiante de desarrollo de software enfocada en backend, inteligencia artificial y automatización. Fortalezco mis conocimientos con proyectos prácticos, aplicando buenas prácticas de programación, control de versiones y metodologías ágiles.</p>
+<ul class="relative list-disc pl-5 mt-3 space-y-2 text-base sm:text-lg text-white/95 font-light">
+<li>Formación en programación, desarrollo web y bases de datos.</li>
+<li>Experiencia construyendo servicios con Java y Spring Boot, y flujos con RAG y n8n.</li>
+<li>Trabajo colaborativo con Scrum.</li>
+</ul>
+</div>
+<div class="cta flex flex-wrap items-center gap-3 pt-2 w-full">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-white via-neutral-200 to-neutral-400 text-black font-headline text-sm font-semibold shadow-[0_0_25px_rgba(255,255,255,0.17)] transition-all hover:-translate-y-0.5" href="#proyectos"><span class="material-symbols-outlined text-[19px]">terminal</span><span>Ver Proyectos</span></a>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass-pill text-white font-headline text-sm font-medium" href="https://github.com/lissethkatherine/lissethkatherine/raw/main/CV-Lisseth-Zapata.pdf" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[19px] text-primary">description</span><span>Descargar Hoja de Vida</span></a>
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass-pill text-on-surface-variant hover:text-white font-headline text-sm" href="mailto:katherinecano020@gmail.com"><span class="material-symbols-outlined text-[19px]">alternate_email</span><span>Contactar</span></a>
+</div>
+</div>
+<div class="lg:col-span-5 relative flex justify-center lg:justify-end items-center pb-6 order-first lg:order-last">
+<div class="absolute w-72 h-72 max-w-full rounded-full bg-gradient-to-tr from-accent-fuchsia/25 via-accent-violet/30 to-accent-indigo/25 blur-3xl -z-10 animate-pulse"></div>
+<div class="relative p-1.5 rounded-full bg-gradient-to-br from-accent-fuchsia via-accent-violet to-accent-indigo shadow-[0_0_50px_rgba(255,255,255,0.15)]">
+<div class="p-2 rounded-full bg-[#141414]/80">
+<div class="hero-photo relative rounded-full overflow-hidden border border-white/10">
+<img src="assets/foto-portafolio.jpg" alt="Lisseth Zapata - Full Stack Developer" class="absolute inset-0 w-full h-full object-cover rounded-full" style="object-position:center 30%"/>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 lg:bottom-2 lg:left-2 lg:translate-x-0 w-max max-w-[92%] px-4 py-2 rounded-xl glass-card shadow-2xl flex items-center gap-2">
+<span class="material-symbols-outlined text-[17px] text-accent-fuchsia">terminal</span>
+<span class="font-mono text-[11px] text-white font-semibold uppercase tracking-wider">Soñando, creando y creciendo</span>
+</div>
+</div>
+</section>
+<section id="stack">
+<div class="sec-head"><div class="flex items-center gap-2 text-accent-fuchsia font-mono text-xs uppercase tracking-widest"><span class="material-symbols-outlined text-[16px]">layers</span><span>Arquitectura · Habilidades Técnicas</span></div><h2 class="font-headline font-bold text-white">Stack Tecnológico</h2><p class="text-sm sm:text-base text-on-surface-variant max-w-2xl leading-relaxed">Ecosistema integral de lenguajes, frameworks backend, bases de datos vectoriales y tradicionales, flujos de inteligencia artificial e infraestructura moderna.</p></div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-8"><div class="p-6 rounded-2xl glass-card flex flex-col"><div class="flex items-center justify-between mb-4"><span class="font-headline text-lg font-semibold text-white flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-accent-fuchsia/15 flex items-center justify-center text-accent-fuchsia border border-accent-fuchsia/20"><span class="material-symbols-outlined text-[18px]">code</span></span>Lenguajes</span><span class="font-mono text-[10px] text-on-surface-variant bg-white/[0.05] border border-white/10 px-2 py-0.5 rounded">Core</span></div><div class="flex flex-wrap gap-2"><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-mono text-xs font-medium text-white">Python</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-fuchsia"></span><span class="font-mono text-xs font-medium text-white">Java</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-mono text-xs font-medium text-white">JavaScript</span></div></div></div><div class="p-6 rounded-2xl glass-card flex flex-col"><div class="flex items-center justify-between mb-4"><span class="font-headline text-lg font-semibold text-white flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-accent-violet/15 flex items-center justify-center text-accent-violet border border-accent-violet/20"><span class="material-symbols-outlined text-[18px]">dns</span></span>Backend</span><span class="font-mono text-[10px] text-on-surface-variant bg-white/[0.05] border border-white/10 px-2 py-0.5 rounded">Services</span></div><div class="flex flex-wrap gap-2"><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-fuchsia"></span><span class="font-mono text-xs font-medium text-white">Spring Boot</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-mono text-xs font-medium text-white">APIs</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-mono text-xs font-medium text-white">Bots de Telegram</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-violet"></span><span class="font-mono text-xs font-medium text-white">Bots de Discord</span></div></div></div><div class="p-6 rounded-2xl glass-card flex flex-col"><div class="flex items-center justify-between mb-4"><span class="font-headline text-lg font-semibold text-white flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-tertiary/15 flex items-center justify-center text-tertiary border border-tertiary/20"><span class="material-symbols-outlined text-[18px]">database</span></span>Bases de Datos</span><span class="font-mono text-[10px] text-on-surface-variant bg-white/[0.05] border border-white/10 px-2 py-0.5 rounded">Persistence</span></div><div class="flex flex-wrap gap-2"><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-mono text-xs font-medium text-white">PostgreSQL</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-mono text-xs font-medium text-white">MySQL</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2 border border-accent-fuchsia/40"><span class="w-1.5 h-1.5 rounded-full bg-accent-fuchsia animate-pulse"></span><span class="font-mono text-xs font-medium text-white">Qdrant (vectoriales)</span></div></div></div><div class="p-6 rounded-2xl glass-card flex flex-col"><div class="flex items-center justify-between mb-4"><span class="font-headline text-lg font-semibold text-white flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-accent-fuchsia/15 flex items-center justify-center text-accent-fuchsia border border-accent-fuchsia/20"><span class="material-symbols-outlined text-[18px]">psychology</span></span>IA y Automatización</span><span class="font-mono text-[10px] text-accent-fuchsia bg-accent-fuchsia/10 border border-accent-fuchsia/20 px-2 py-0.5 rounded">Smart</span></div><div class="flex flex-wrap gap-2"><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-fuchsia"></span><span class="font-mono text-xs font-medium text-white">RAG</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-mono text-xs font-medium text-white">Prompt Engineering</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-mono text-xs font-medium text-white">n8n</span></div></div></div><div class="p-6 rounded-2xl glass-card flex flex-col"><div class="flex items-center justify-between mb-4"><span class="font-headline text-lg font-semibold text-white flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-accent-violet/15 flex items-center justify-center text-accent-violet border border-accent-violet/20"><span class="material-symbols-outlined text-[18px]">construction</span></span>Infraestructura</span><span class="font-mono text-[10px] text-on-surface-variant bg-white/[0.05] border border-white/10 px-2 py-0.5 rounded">DevOps</span></div><div class="flex flex-wrap gap-2"><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-fuchsia"></span><span class="font-mono text-xs font-medium text-white">Docker</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-mono text-xs font-medium text-white">Docker Compose</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-mono text-xs font-medium text-white">Git</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-mono text-xs font-medium text-white">GitHub</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-mono text-xs font-medium text-white">Visual Studio Code</span></div></div></div><div class="p-6 rounded-2xl glass-card flex flex-col gap-5"><div><div class="flex items-center justify-between mb-4"><span class="font-headline text-lg font-semibold text-white flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-accent-indigo/15 flex items-center justify-center text-accent-indigo border border-accent-indigo/20"><span class="material-symbols-outlined text-[18px]">web</span></span>Frontend</span><span class="font-mono text-[10px] text-on-surface-variant bg-white/[0.05] border border-white/10 px-2 py-0.5 rounded">UI</span></div><div class="flex flex-wrap gap-2"><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-fuchsia"></span><span class="font-mono text-xs font-medium text-white">HTML</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-mono text-xs font-medium text-white">CSS</span></div></div></div><div class="pt-4 border-t border-white/5"><div class="flex items-center justify-between mb-4"><span class="font-headline text-lg font-semibold text-white flex items-center gap-2.5"><span class="w-8 h-8 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary border border-secondary/20"><span class="material-symbols-outlined text-[18px]">sync</span></span>Metodologías</span><span class="font-mono text-[10px] text-on-surface-variant bg-white/[0.05] border border-white/10 px-2 py-0.5 rounded">Agile</span></div><div class="flex flex-wrap gap-2"><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-mono text-xs font-medium text-white">Scrum</span></div><div class="px-3.5 py-1.5 rounded-xl glass-pill flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-mono text-xs font-medium text-white">Metodologías ágiles</span></div></div></div></div></div>
+</section>
+<section id="proyectos">
+<div class="sec-head"><div class="flex items-center gap-2 text-secondary font-mono text-xs uppercase tracking-widest"><span class="material-symbols-outlined text-[16px]">folder_special</span><span>Desarrollo de Software · Casos de Uso</span></div><h2 class="font-headline font-bold text-white">Proyectos Destacados</h2><p class="text-sm sm:text-base text-on-surface-variant max-w-2xl leading-relaxed">Implementaciones funcionales construidas con buenas prácticas de arquitectura, patrones de diseño, integración de modelos de lenguaje e interfaces accesibles.</p></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8"><div class="p-6 sm:p-7 rounded-2xl glass-card flex flex-col justify-between group relative overflow-hidden"><div class="absolute top-0 right-0 w-44 h-44 bg-accent-fuchsia/10 rounded-full blur-3xl pointer-events-none group-hover:bg-accent-fuchsia/20 transition-all"></div><div class="flex flex-col gap-5 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-xs text-accent-fuchsia font-bold tracking-wider">PROYECTO // 01</span><span class="px-2.5 py-0.5 rounded-full bg-accent-fuchsia/15 border border-accent-fuchsia/30 text-accent-fuchsia font-mono text-[11px] font-semibold">RAG · Vector DB</span></div><div><h3 class="font-headline font-bold text-white group-hover:text-primary transition-colors">Analizador de Tickets IA</h3><p class="text-sm sm:text-base text-on-surface-variant mt-2 leading-relaxed font-light">Analiza tickets de soporte con RAG: n8n y Qdrant buscan casos similares por embeddings, un LLM (gpt-4.1-mini vía OpenRouter) genera el análisis y Spring Boot guarda el historial en PostgreSQL.</p></div><div class="flex flex-wrap gap-1.5 pt-1"><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface">Java 21</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface">Spring Boot</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface">PostgreSQL</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-accent-fuchsia">n8n</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-secondary">Qdrant</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface">Docker</span></div></div><div class="pt-6 mt-6 border-t border-white/5 flex items-center justify-between relative z-10"><span class="font-mono text-xs text-outline">Arquitectura Distribuida</span><a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl glass-pill hover:bg-gradient-to-r hover:from-accent-fuchsia hover:to-accent-violet text-white hover:text-black font-headline text-xs font-semibold transition-all hover:scale-105" href="https://github.com/lissethkatherine/Analizador-de-tickets-IA2" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[17px]">code</span><span>Repositorio</span></a></div></div><div class="p-6 sm:p-7 rounded-2xl glass-card flex flex-col justify-between group relative overflow-hidden"><div class="absolute top-0 right-0 w-44 h-44 bg-accent-violet/10 rounded-full blur-3xl pointer-events-none group-hover:bg-accent-violet/20 transition-all"></div><div class="flex flex-col gap-5 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-xs text-secondary font-bold tracking-wider">PROYECTO // 02</span><span class="px-2.5 py-0.5 rounded-full bg-accent-violet/15 border border-accent-violet/30 text-secondary font-mono text-[11px] font-semibold">POO Avanzado</span></div><div><h3 class="font-headline font-bold text-white group-hover:text-secondary transition-colors">Sistema de Gestión de Vuelos y Aeropuertos</h3><p class="text-sm sm:text-base text-on-surface-variant mt-2 leading-relaxed font-light">Aplicación de consola para gestionar aeropuertos, vuelos, pasajeros y pilotos, con herencia, polimorfismo, genéricos, colecciones y excepciones personalizadas.</p></div><div class="flex flex-wrap gap-1.5 pt-1"><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-accent-fuchsia">Java</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface">POO</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface-variant">Generics</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface-variant">Collections</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface-variant">Custom Exceptions</span></div></div><div class="pt-6 mt-6 border-t border-white/5 flex items-center justify-between relative z-10"><span class="font-mono text-xs text-outline">Patrones Estructurados</span><a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl glass-pill hover:bg-gradient-to-r hover:from-accent-violet hover:to-accent-indigo text-white hover:text-black font-headline text-xs font-semibold transition-all hover:scale-105" href="https://github.com/lissethkatherine/Sistema-de-Gestion-de-Vuelos-y-Aeropuertos" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[17px]">code</span><span>Repositorio</span></a></div></div><div class="p-6 sm:p-7 rounded-2xl glass-card flex flex-col justify-between group relative overflow-hidden"><div class="absolute top-0 right-0 w-44 h-44 bg-tertiary/10 rounded-full blur-3xl pointer-events-none group-hover:bg-tertiary/20 transition-all"></div><div class="flex flex-col gap-5 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-xs text-tertiary font-bold tracking-wider">PROYECTO // 03</span><span class="px-2.5 py-0.5 rounded-full bg-tertiary/15 border border-tertiary/30 text-tertiary font-mono text-[11px] font-semibold">Automatización Urbana</span></div><div><h3 class="font-headline font-bold text-white group-hover:text-tertiary transition-colors">SmartCity-Fix</h3><p class="text-sm sm:text-base text-on-surface-variant mt-2 leading-relaxed font-light">Sistema de reportes urbanos que clasifica incidencias automáticamente y permite consultar el estado de los tickets en tiempo real.</p></div><div class="flex flex-wrap gap-1.5 pt-1"><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-secondary">Python</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-accent-fuchsia">IA</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-tertiary">Telegram</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface">Bot Engine</span></div></div><div class="pt-6 mt-6 border-t border-white/5 flex items-center justify-between relative z-10"><span class="font-mono text-xs text-outline">Clasificación en Vivo</span><a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl glass-pill hover:bg-gradient-to-r hover:from-accent-fuchsia hover:to-tertiary text-white hover:text-black font-headline text-xs font-semibold transition-all hover:scale-105" href="https://github.com/lissethkatherine/Proyecto_Smartcityfix_D2" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[17px]">code</span><span>Repositorio</span></a></div></div><div class="p-6 sm:p-7 rounded-2xl glass-card flex flex-col justify-between group relative overflow-hidden"><div class="absolute top-0 right-0 w-44 h-44 bg-accent-fuchsia/10 rounded-full blur-3xl pointer-events-none group-hover:bg-accent-fuchsia/20 transition-all"></div><div class="flex flex-col gap-5 relative z-10"><div class="flex items-center justify-between"><span class="font-mono text-xs text-primary font-bold tracking-wider">PROYECTO // 04</span><span class="px-2.5 py-0.5 rounded-full bg-white/[0.06] border border-white/10 text-on-surface font-mono text-[11px] font-semibold">Finanzas Personales</span></div><div><h3 class="font-headline font-bold text-white group-hover:text-primary transition-colors">Mi Calendario de Ahorros Inteligente</h3><p class="text-sm sm:text-base text-on-surface-variant mt-2 leading-relaxed font-light">Página web para el seguimiento de metas de ahorro personal.</p></div><div class="flex flex-wrap gap-1.5 pt-1"><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-accent-fuchsia">HTML</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-secondary">CSS</span><span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/5 font-mono text-xs text-on-surface-variant">Responsive</span></div></div><div class="pt-6 mt-6 border-t border-white/5 flex items-center justify-between relative z-10"><span class="font-mono text-xs text-outline">Despliegue Web</span><a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-white via-neutral-200 to-neutral-400 text-black shadow-md font-headline text-xs font-semibold transition-all hover:scale-105" href="https://lissethkatherine.github.io/Mi-Calendario-de-Ahorros-Inteligente/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[17px]">launch</span><span>Ver Demo</span></a></div></div></div>
+</section>
+<section id="enfoque">
+<div class="sec-head"><div class="flex items-center gap-2 text-accent-fuchsia font-mono text-xs uppercase tracking-widest"><span class="material-symbols-outlined text-[16px]">psychology_alt</span><span>Visión &amp; Metodología</span></div><h2 class="font-headline font-bold text-white">Enfoque &amp; Inteligencia Artificial</h2></div>
+<div class="p-6 sm:p-10 rounded-2xl glass-card relative overflow-hidden mb-6 lg:mb-8">
+<div class="absolute -right-12 -bottom-12 w-80 h-80 bg-gradient-to-br from-accent-fuchsia/20 to-accent-violet/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row items-start gap-5 relative z-10">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-fuchsia via-accent-violet to-accent-indigo flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(255,255,255,0.2)] text-black"><span class="material-symbols-outlined text-[30px]">smart_toy</span></div>
+<div class="flex flex-col gap-2">
+<span class="font-mono text-xs text-accent-fuchsia uppercase font-bold tracking-wider">Filosofía de Trabajo con IA</span>
+<p class="font-headline text-lg sm:text-xl text-white font-medium leading-relaxed italic">Uso herramientas de IA como apoyo para generar y optimizar código, entender errores, depurar, documentar proyectos y aprender nuevas tecnologías.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8">
+<div class="p-6 sm:p-7 rounded-2xl glass-card flex flex-col gap-5">
+<div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-secondary text-[24px]">trending_up</span><h3 class="font-headline font-bold text-white">En qué me enfoco actualmente</h3></div>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-3 p-3.5 rounded-xl glass-pill"><span class="material-symbols-outlined text-accent-fuchsia text-[20px] shrink-0 mt-0.5">check_circle</span><span class="text-sm sm:text-base text-on-surface leading-normal">Seguir fortaleciendo mis conocimientos en desarrollo backend.</span></div>
+<div class="flex items-start gap-3 p-3.5 rounded-xl glass-pill"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">check_circle</span><span class="text-sm sm:text-base text-on-surface leading-normal">Desarrollar proyectos que me permitan aprender y aportar valor.</span></div>
+<div class="flex items-start gap-3 p-3.5 rounded-xl glass-pill"><span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">check_circle</span><span class="text-sm sm:text-base text-on-surface leading-normal">Mantenerme actualizada con nuevas tecnologías, incluida la IA aplicada.</span></div>
+</div>
+</div>
+<div class="p-6 sm:p-7 rounded-2xl glass-card flex flex-col justify-between gap-5">
+<div class="flex flex-col gap-5">
+<div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-accent-fuchsia text-[24px]">flag</span><h3 class="font-headline font-bold text-white">Objetivo Profesional</h3></div>
+<div class="p-5 rounded-xl bg-white/[0.03] border border-white/10"><p class="font-headline text-lg sm:text-xl text-primary leading-relaxed font-semibold italic">Una oportunidad donde pueda aportar, seguir creciendo profesionalmente y trabajar en equipo.</p></div>
+</div>
+<div class="flex items-start gap-2 text-outline font-mono text-xs"><span class="material-symbols-outlined text-[18px] text-secondary shrink-0">verified</span><span>Compromiso técnico · Aprendizaje continuo · Metodologías ágiles</span></div>
+</div>
+</div>
+</section>
+<section id="habilidades">
+<div class="sec-head"><div class="flex items-center gap-2 text-tertiary font-mono text-xs uppercase tracking-widest"><span class="material-symbols-outlined text-[16px]">groups</span><span>Dinámica de Equipo &amp; Resolución</span></div><h2 class="font-headline font-bold text-white">Habilidades Blandas</h2><p class="text-sm sm:text-base text-on-surface-variant max-w-2xl leading-relaxed">Competencias humanas y metodológicas aplicadas diariamente en el desarrollo de software colaborativo y la entrega de soluciones confiables.</p></div>
+<div class="two-col grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6"><div class="p-4 sm:p-5 rounded-2xl glass-card flex flex-col items-start gap-3 group"><div class="w-10 h-10 rounded-xl bg-accent-fuchsia/15 flex items-center justify-center text-accent-fuchsia border border-accent-fuchsia/20 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">insights</span></div><span class="font-headline text-sm font-semibold text-white">Pensamiento analítico</span></div><div class="p-4 sm:p-5 rounded-2xl glass-card flex flex-col items-start gap-3 group"><div class="w-10 h-10 rounded-xl bg-accent-violet/15 flex items-center justify-center text-secondary border border-accent-violet/20 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">build_circle</span></div><span class="font-headline text-sm font-semibold text-white">Resolución de problemas</span></div><div class="p-4 sm:p-5 rounded-2xl glass-card flex flex-col items-start gap-3 group"><div class="w-10 h-10 rounded-xl bg-tertiary/15 flex items-center justify-center text-tertiary border border-tertiary/20 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">diversity_3</span></div><span class="font-headline text-sm font-semibold text-white">Trabajo en equipo</span></div><div class="p-4 sm:p-5 rounded-2xl glass-card flex flex-col items-start gap-3 group"><div class="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center text-primary border border-primary/20 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">chat</span></div><span class="font-headline text-sm font-semibold text-white">Comunicación efectiva</span></div><div class="p-4 sm:p-5 rounded-2xl glass-card flex flex-col items-start gap-3 group"><div class="w-10 h-10 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary border border-secondary/20 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">autorenew</span></div><span class="font-headline text-sm font-semibold text-white">Adaptabilidad</span></div><div class="p-4 sm:p-5 rounded-2xl glass-card flex flex-col items-start gap-3 group"><div class="w-10 h-10 rounded-xl bg-tertiary/15 flex items-center justify-center text-tertiary border border-tertiary/20 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">verified_user</span></div><span class="font-headline text-sm font-semibold text-white">Responsabilidad</span></div><div class="p-4 sm:p-5 rounded-2xl glass-card flex flex-col items-start gap-3 group"><div class="w-10 h-10 rounded-xl bg-accent-fuchsia/15 flex items-center justify-center text-accent-fuchsia border border-accent-fuchsia/20 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">school</span></div><span class="font-headline text-sm font-semibold text-white">Aprendizaje autónomo</span></div><div class="p-4 sm:p-5 rounded-2xl glass-card flex flex-col items-start gap-3 group"><div class="w-10 h-10 rounded-xl bg-accent-violet/15 flex items-center justify-center text-secondary border border-accent-violet/20 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[20px]">schedule</span></div><span class="font-headline text-sm font-semibold text-white">Gestión del tiempo</span></div></div>
+</section>
+<section id="contacto">
+<div class="p-6 sm:p-12 rounded-3xl glass-card relative overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-gradient-to-br from-accent-fuchsia/25 to-accent-violet/25 rounded-full blur-[110px] pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 relative z-10">
+<div class="flex flex-col gap-2 max-w-xl">
+<div class="inline-flex items-center gap-2 text-accent-fuchsia font-mono text-xs uppercase tracking-widest"><span class="material-symbols-outlined text-[16px]">connect_without_contact</span><span>Canales Oficiales</span></div>
+<h2 class="font-headline font-bold text-white">Conectemos</h2>
+<p class="text-sm sm:text-base text-on-surface-variant leading-relaxed">Siempre interesada en participar en proyectos desafiantes de desarrollo backend, integración de agentes de IA y flujos de automatización.</p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-white via-neutral-200 to-neutral-400 text-black font-headline text-sm font-semibold shadow-[0_0_25px_rgba(255,255,255,0.17)] transition-all hover:scale-105" href="mailto:katherinecano020@gmail.com"><span class="material-symbols-outlined text-[19px]">mail</span><span>Enviar Correo</span></a>
+<button class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl glass-pill text-white hover:text-primary font-headline text-sm" onclick="navigator.clipboard.writeText('katherinecano020@gmail.com');alert('¡Correo katherinecano020@gmail.com copiado al portapapeles!');"><span class="material-symbols-outlined text-[18px] text-accent-fuchsia">content_copy</span><span>Copiar Correo</span></button>
+</div>
+</div>
+<div class="two-col grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6 mt-10 pt-8 border-t border-white/5 relative z-10"><a class="p-4 sm:p-5 rounded-2xl glass-pill hover:border-accent-fuchsia/40 flex flex-col gap-2 group" href="https://github.com/lissethkatherine" rel="noopener noreferrer" target="_blank"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-accent-fuchsia text-[22px]">terminal</span><span class="material-symbols-outlined text-outline group-hover:text-accent-fuchsia transition-colors text-[18px]">arrow_outward</span></div><span class="font-headline text-base font-bold text-white mt-1">GitHub</span><span class="text-xs text-on-surface-variant truncate font-mono">@lissethkatherine</span></a><a class="p-4 sm:p-5 rounded-2xl glass-pill hover:border-accent-violet/40 flex flex-col gap-2 group" href="https://www.linkedin.com/in/lisseth-katherine-zapata-cano-aa43543aa" rel="noopener noreferrer" target="_blank"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-secondary text-[22px]">work</span><span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors text-[18px]">arrow_outward</span></div><span class="font-headline text-base font-bold text-white mt-1">LinkedIn</span><span class="text-xs text-on-surface-variant truncate">Lisseth Zapata Cano</span></a><a class="p-4 sm:p-5 rounded-2xl glass-pill hover:border-tertiary/40 flex flex-col gap-2 group" href="mailto:katherinecano020@gmail.com" rel="noopener noreferrer" target="_blank"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-tertiary text-[22px]">alternate_email</span><span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors text-[18px]">arrow_outward</span></div><span class="font-headline text-base font-bold text-white mt-1">Correo</span><span class="text-xs text-on-surface-variant truncate font-mono">katherinecano020</span></a><a class="p-4 sm:p-5 rounded-2xl glass-pill hover:border-primary/40 flex flex-col gap-2 group" href="https://github.com/lissethkatherine/lissethkatherine/raw/main/CV-Lisseth-Zapata.pdf" rel="noopener noreferrer" target="_blank"><div class="flex items-center justify-between"><span class="material-symbols-outlined text-primary text-[22px]">description</span><span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[18px]">download</span></div><span class="font-headline text-base font-bold text-white mt-1">Hoja de Vida</span><span class="text-xs text-on-surface-variant truncate">Formato PDF oficial</span></a></div>
+</div>
+</section>
+</div>
+</main>
+<footer class="site-footer relative z-10">
+<div class="max-w-[1280px] mx-auto px-5 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+<div class="flex flex-col items-center md:items-start gap-1">
+<div class="flex items-center gap-2"><span class="font-headline text-lg font-bold text-white">LZ.</span><span class="text-sm text-on-surface-variant font-medium">Lisseth Zapata</span></div>
+<p class="font-mono text-xs text-outline">© 2026 Lisseth Zapata · Full Stack Developer · Bucaramanga, Colombia</p>
+</div>
+<div class="flex items-center flex-wrap justify-center gap-x-6 gap-y-3">
+<a href="https://github.com/lissethkatherine" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">terminal</span>GitHub</a>
+<a href="https://www.linkedin.com/in/lisseth-katherine-zapata-cano-aa43543aa" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">work</span>LinkedIn</a>
+<a href="mailto:katherinecano020@gmail.com"><span class="material-symbols-outlined text-[16px]">mail</span>Correo</a>
+</div>
+</div>
+</footer>
+<script>
+(()=>{
+const r=document.documentElement,m=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let t=false;
+if(!m){addEventListener('scroll',()=>{if(!t){requestAnimationFrame(()=>{r.style.setProperty('--scroll-y',(window.scrollY||0)+'px');t=false});t=true}},{passive:true})}
+const els=[...document.querySelectorAll('main section > .glass-card, main section .grid > .glass-card')];
+els.forEach((e,i)=>{e.classList.add('reveal');e.style.transitionDelay=Math.min((i%3)*90,180)+'ms'});
+if(m||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+const o=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const e=x.target;e.classList.add('in');setTimeout(()=>{e.style.transitionDelay=''},1200);o.unobserve(e)}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+els.forEach(e=>o.observe(e));
+})();
+</script>
+</body>
+</html>
